@@ -1,0 +1,25 @@
+package arrays;
+//occurences
+public class array2 {
+
+	public static void main(String[] args) {
+		int[] a = {1,2,1,4,2};
+		int[] f = new int[a.length];
+		
+		for(int i =0; i<a.length; i++) {
+			//a[i] == 1 f[1] == 1
+ 			f[a[i]]++;
+		}
+		
+		for(int i =0; i<f.length;i++) {
+			if(f[i]>0) 
+		
+		System.out.println(i+ " occured " + f[i]+ " times");
+			
+		}
+
+	}
+
+}
+
+//
