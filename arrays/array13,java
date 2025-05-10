@@ -1,0 +1,43 @@
+package arrays;
+
+import java.util.Scanner;
+
+public class array7 {
+	public int removeDuplicates(int[] nums) {
+		int k=0;
+		for(int i =0; i<nums.length; i++) {
+			int j;
+			for(j =0; j<i; j++) {
+				if(nums[i] == nums[j]) {
+					break;
+				}
+			}
+			if(i == j) {
+				nums[k] = nums[i];
+				k++;
+			}}
+		return k;
+		
+	
+		
+ 
+}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		array7 obj = new array7();
+		int n = sc.nextInt();
+		int [] nums = new int[n];
+		
+		for(int i =0; i<nums.length; i++) {
+			nums[i] = sc.nextInt();
+			}
+		int res = obj.removeDuplicates(nums);
+		for(int i =0; i<res;i++) {
+			System.out.println(nums[i]);
+		}
+		
+		sc.close();
+	}
+
+}
