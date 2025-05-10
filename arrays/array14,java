@@ -1,0 +1,36 @@
+package arrays;
+
+
+import java.util.Scanner;
+
+public class array8 {
+public int removeElement(int[] nums, int val) {
+	int k = 0;
+	for(int i =0; i<nums.length; i++) {
+		if(nums[i] != val) {
+		   nums[k] = nums[i];
+		   k++;
+		}
+		}
+	
+        return k;
+    }
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		array8 obj = new array8();
+	
+		int n = sc.nextInt();
+		int [] nums = new int[n];
+		int val = sc.nextInt();
+		for(int i =0; i<nums.length; i++) {
+			nums[i] = sc.nextInt();
+			}
+		int res = obj.removeElement(nums, val);
+		System.out.println(res);
+		
+		sc.close();
+
+	}
+
+}
